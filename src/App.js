@@ -1,6 +1,5 @@
 import React from 'react';
 import Sidebar from './components/sidebar/Sidebar';
-import SidebarOptions from './components/sidebar/SidebarOption';
 
 import './App.css';
 
