@@ -17,7 +17,7 @@ import "./sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Twitter />
+      <Twitter className="sidebar__twitterIcon" />
       <SidebarOption active text="Home" Icon={Home} />
       <SidebarOption text="Explore" Icon={Search} />
       <SidebarOption text="Notifications" Icon={NotificationsNone} />
