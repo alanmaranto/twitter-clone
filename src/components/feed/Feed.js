@@ -1,4 +1,5 @@
 import React from "react";
+import TweetBox from './TweetBox';
 import "./feed.css";
 
 const Feed = () => {
@@ -7,6 +8,7 @@ const Feed = () => {
       <div className="feed_header">
         <h2>Home</h2>
       </div>
+      <TweetBox />
     </div>
   );
 };
