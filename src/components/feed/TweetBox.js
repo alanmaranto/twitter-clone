@@ -18,6 +18,9 @@ const TweetBox = () => {
       text: tweetMessage,
       avatar:
         "https://s.gravatar.com/avatar/f2f76f81841c48b8344b744065463e49?s=80",
+      timestamp: +new Date(),
+      // timestamp: new Date(),
+      
     });
 
     setTweetMessage("");

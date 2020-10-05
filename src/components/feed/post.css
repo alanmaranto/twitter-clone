@@ -36,6 +36,13 @@
   color: gray;
 }
 
+.post__headerTimestamp {
+  font-weight: 600;
+  font-size: 12px;
+  color: gray;
+  margin-left: 6px;
+}
+
 .post__headerText > h3 {
   font-size: 15px;
   margin-bottom: 5px;

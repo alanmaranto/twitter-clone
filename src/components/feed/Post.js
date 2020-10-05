@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-
+import moment from "moment";
 import { Avatar } from "@material-ui/core";
 import {
   VerifiedUser,
@@ -29,6 +29,10 @@ const Post = forwardRef(
                 <span className="post__headerSpecial">
                   {verified ? <VerifiedUser className="post__badge" /> : null}@
                   {username}
+                </span>
+                <span className="post__headerTimestamp">
+                  {/* {new Date(timestamp).toLocaleString()} */}
+                  {moment(timestamp).fromNow()}
                 </span>
               </h3>
             </div>

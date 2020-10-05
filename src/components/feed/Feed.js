@@ -34,6 +34,7 @@ const Feed = () => {
             text={post.text}
             avatar={post.avatar}
             image={post.image}
+            timestamp={post.timestamp}
           />
         ))}
       </FlipMove>
