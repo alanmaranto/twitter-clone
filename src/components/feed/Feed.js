@@ -10,12 +10,14 @@ const Feed = () => {
         <h2>Home</h2>
       </div>
       <TweetBox />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post
+        displayName="Alan Maranto"
+        username="alanmaranto"
+        verified
+        text="Works"
+        avatar="https://s.gravatar.com/avatar/f2f76f81841c48b8344b744065463e49?s=80"
+        image="https://media.giphy.com/media/9rtpurjbqiqZXbBBet/giphy.gif"
+      />
     </div>
   );
 };

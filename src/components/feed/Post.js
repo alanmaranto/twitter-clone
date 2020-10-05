@@ -7,7 +7,7 @@ import {
   FavoriteBorder,
   Publish,
 } from "@material-ui/icons";
-import './post.css'
+import "./post.css";
 
 const Post = ({
   displayName,
@@ -21,24 +21,24 @@ const Post = ({
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://s.gravatar.com/avatar/f2f76f81841c48b8344b744065463e49?s=80" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Alan Maranto
+              {displayName}
               <span className="post__headerSpecial">
-                <VerifiedUser className="post__badge" />
-                @AlanMaranto
+                {verified ? <VerifiedUser className="post__badge" /> : null}@
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>Let's make dinner</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src="" alt="" />
+        <img src={image} alt="" />
         <div className="post__footer">
           <ChatBubbleOutline fontSize="small" />
           <Repeat fontSize="small" />
