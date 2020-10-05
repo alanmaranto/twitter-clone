@@ -1,4 +1,5 @@
-import React from "react";
+import React, { forwardRef } from "react";
+
 import { Avatar } from "@material-ui/core";
 import {
   VerifiedUser,
@@ -7,47 +8,45 @@ import {
   FavoriteBorder,
   Publish,
 } from "@material-ui/icons";
+
 import "./post.css";
 
-const Post = ({
-  displayName,
-  username,
-  verified,
-  timestamp,
-  text,
-  image,
-  avatar,
-}) => {
-  return (
-    <div className="post">
-      <div className="post__avatar">
-        <Avatar src={avatar} />
-      </div>
-      <div className="post__body">
-        <div className="post__header">
-          <div className="post__headerText">
-            <h3>
-              {displayName}
-              <span className="post__headerSpecial">
-                {verified ? <VerifiedUser className="post__badge" /> : null}@
-                {username}
-              </span>
-            </h3>
+const Post = forwardRef(
+  (
+    { displayName, username, verified, timestamp, text, image, avatar },
+    ref
+  ) => {
+    return (
+      <div className="post" ref={ref}>
+        <div className="post__avatar">
+          <Avatar src={avatar} />
+        </div>
+        <div className="post__body">
+          <div className="post__header">
+            <div className="post__headerText">
+              <h3>
+                {displayName}
+                <span className="post__headerSpecial">
+                  {verified ? <VerifiedUser className="post__badge" /> : null}@
+                  {username}
+                </span>
+              </h3>
+            </div>
+            <div className="post__headerDescription">
+              <p>{text}</p>
+            </div>
           </div>
-          <div className="post__headerDescription">
-            <p>{text}</p>
+          <img src={image} alt="" />
+          <div className="post__footer">
+            <ChatBubbleOutline fontSize="small" />
+            <Repeat fontSize="small" />
+            <FavoriteBorder fontSize="small" />
+            <Publish fontSize="small" />
           </div>
         </div>
-        <img src={image} alt="" />
-        <div className="post__footer">
-          <ChatBubbleOutline fontSize="small" />
-          <Repeat fontSize="small" />
-          <FavoriteBorder fontSize="small" />
-          <Publish fontSize="small" />
-        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 export default Post;
